@@ -68,14 +68,3 @@ class Keypad(tk.Frame):
     def frame(self):
         """Returns the frame object containing the buttons."""
         return super()
-
-if __name__ == '__main__':
-    keys = list('789456123 0.')  # = ['7','8','9',...]
-    root = tk.Tk()
-    root.title("Keypad Demo")
-    keypad = Keypad(root, keynames=keys, columns=3)
-    keypad.configure(foreground='red')  # set color of all keys
-    keypad['font'] = ('Comic Sans MS', 100)
-    keypad.frame.configure(background='blue')
-    keypad.pack(side=tk.LEFT, expand=True, fill=tk.BOTH)
-    root.mainloop()
